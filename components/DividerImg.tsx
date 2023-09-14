@@ -1,9 +1,18 @@
-import React from 'react'
+"use client"
+import { ImgProps } from "@/types";
+import Image from "next/image";
+import React from "react";
 
-const DividerImg = () => {
+const DividerImg = ({ width, height, className }: ImgProps) => {
   return (
-    <div>DividerImg</div>
-  )
-}
+    <Image
+      src="/divider.png"
+      alt="divider"
+      width={width}
+      className={className}
+      height={height}
+    />
+  );
+};
 
-export default DividerImg
+export default DividerImg;
